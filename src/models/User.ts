@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { uuid } from 'uuidv4';
 
 const UserSchema = new Schema({
@@ -8,4 +8,6 @@ const UserSchema = new Schema({
     pass: {type: String, require}
 })
 
-export default UserSchema;
+const User = model('User', UserSchema)
+
+export default User;
