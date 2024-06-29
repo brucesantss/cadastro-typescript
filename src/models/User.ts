@@ -1,8 +1,8 @@
 import { Schema, model } from 'mongoose';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 const UserSchema = new Schema({
-    id: {type: String, default: uuid, require, unique: true},
+    id: {type: String, default: v4, require, unique: true},
     name: {type: String, require},
     email: {type: String, require},
     pass: {type: String, require}
